@@ -1,0 +1,19 @@
+config:
+  target: "wss://transaction.kointra.com/ws?Jwt=undefined&Symbol=BTC/USDT"
+  ensure:
+    maxErrorRate: 1
+  phases:
+      - duration: 20
+        arrivalRate: 5
+        rampTo: 10
+        name: "Warming up"
+      - duration: 60
+        arrivalRate: 10
+        rampTo: 100
+        name: "Max load"
+scenarios:
+  - engine: "ws"
+    flow:
+      - send: "hello"
+      - think: 3
+      - send: "how are you?"
