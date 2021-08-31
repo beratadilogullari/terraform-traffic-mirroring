@@ -1,5 +1,5 @@
 config:
-  target: "wss://transaction.kointra.com/ws?Jwt=undefined&Symbol=BTC/USDT"
+  target: "wss://transaction.test.trabilisim.tech/ws?Jwt=undefined&Symbol=BTC/USDT"
   ensure:
     maxErrorRate: 1
   phases:
